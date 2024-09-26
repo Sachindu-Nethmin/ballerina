@@ -1,7 +1,7 @@
 import ballerina/graphql;
 service /news on new graphql:Listener(9090) {
     
-    resource function get users() return User[] {
+    resource function get users() returns User[] {
         return [{
             id:"1",
             name: "John",
@@ -10,7 +10,7 @@ service /news on new graphql:Listener(9090) {
     }
 }
 
-type User recode {|
+type User record {|
     string id;
     string name;
     int age;
