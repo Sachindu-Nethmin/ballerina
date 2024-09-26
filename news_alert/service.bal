@@ -41,7 +41,10 @@ service /news on new graphql:Listener(9090) {
         return publisher;
     }
 
-    remote function publish(NewsUpdate newsUpdate) returns NewsRecord {
+    remote function publish(NewsUpdate newsUpdate) returns NewsRecord | error{
+        if publisherTable.hasKey(newsUpdate.publisherId){
+            return error ("Publisher not fund");
+        }
         NewsRecord newsRecord = {
         id: uuid:createType1AsString(),
         ...newsUpdate
