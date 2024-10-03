@@ -1,0 +1,7 @@
+[container.image]
+repository="wso2inc" # Docker hub name
+name="hello" # container name
+tag="v0.1.0"
+
+[settings]
+buildImage=true
