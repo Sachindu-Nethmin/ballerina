@@ -1,4 +1,4 @@
-# IEEE Hackathon Workshop - Designing a REST API with Ballerina
+ IEEE Hackathon Workshop - Designing a REST API with Ballerina
 
 ## Introduction
 
